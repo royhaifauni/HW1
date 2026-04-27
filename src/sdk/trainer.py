@@ -1,4 +1,3 @@
-import torch
 import torch.nn as nn
 import torch.optim as optim
 from .gatekeeper import APIGatekeeper
@@ -16,22 +15,18 @@ class SignalTrainer:
         total_loss = 0.0
         
         for x, y in dataloader:
-            # Note: Dataset returns (batch, 4 + window)
-            # We need to reshape for RNN: (batch, window, 5)
-            # For simplicity in this demo, we assume seq_len=1
-            x = x.unsqueeze(1) # (batch, 1, 5)
-            y = y.unsqueeze(2) # (batch, window, 1) -> Adjusting for simplicity
-            
+            # x shape: (batch, seq_len, 5)
+            # y shape: (batch, seq_len, 1)
             self.optimizer.zero_grad()
             
             batch_size = x.size(0)
             hidden = self.gk.model.init_hidden(batch_size)
             x_dev, hidden_dev = self.gk.process_batch(x, hidden)
+            y_dev = y.to(self.gk.device)
             
             outputs, _ = self.gk.model(x_dev, hidden_dev)
             
-            # Temporary: Matching target shape for training logic validation
-            loss = self.criterion(outputs[:, -1, :], y[:, -1, :])
+            loss = self.criterion(outputs, y_dev)
             loss.backward()
             self.optimizer.step()
             total_loss += loss.item()

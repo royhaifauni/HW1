@@ -1,107 +1,515 @@
 # Project Ledger: Signal-Recurrence-Research
 
-## Phase 1: Scaffold & Infrastructure (Tasks 1-50)
+## Phase 1: Scaffold & Infrastructure (Tasks 1-100)
 - [x] Task 1: Initialize project with `uv init`.
-- [x] Task 2: Create directory structure (`docs/prd`, `docs/plan`, `docs/todo`, `src/sdk`, `src/models`, `tests`, `notebooks`).
-- [x] Task 3: Create `.gitignore` with strict exclusion rules.
-- [x] Task 4: Configure `pyproject.toml` with `ruff`.
-- [x] Task 5: Configure `ruff` line length (88).
-- [x] Task 6: Add `pytest` to development dependencies.
-- [x] Task 7: Add `numpy` to project dependencies.
-- [x] Task 8: Add `torch` (or preferred DL framework) to dependencies.
-- [x] Task 9: Set up `.python-version` (3.12+).
-- [x] Task 10: Create `src/sdk/__init__.py`.
-- [x] Task 11: Create `src/models/__init__.py`.
-- [x] Task 12: Create `tests/__init__.py`.
-- [x] Task 13: Define `SAMPLE_RATE` constant in `src/sdk/constants.py`.
-- [x] Task 14: Define `DURATION` constant in `src/sdk/constants.py`.
-- [x] Task 15: Define `FREQUENCIES` constant (1, 3, 5, 7) in `src/sdk/constants.py`.
-- [x] Task 16: Define `PHASE_RANGE` constant (0, 2*pi).
-- [x] Task 17: Define `NOISE_LEVEL` constant.
-- [x] Task 18: Initialize `docs/prd/main_prd.md`.
-- [x] Task 19: Populate `main_prd.md` with project description.
-- [x] Task 20: Define success metrics in `main_prd.md`.
-- [x] Task 21: Initialize `docs/prd/signal_engine.md`.
-- [x] Task 22: Define signal generation logic in `signal_engine.md`.
-- [x] Task 23: Initialize `docs/prd/rnn_architecture.md`.
-- [x] Task 24: Initialize `docs/prd/lstm_architecture.md`.
-- [x] Task 25: Initialize `docs/plan/PLAN.md`.
-- [x] Task 26: Define SDK-First design in `PLAN.md`.
-- [x] Task 27: Define TDD workflow in `PLAN.md`.
-- [ ] Task 28: Set up initial test file `tests/test_environment.py`.
-- [ ] Task 29: Write test to verify `numpy` import.
-- [ ] Task 30: Write test to verify `torch` (or framework) import.
-- [x] Task 31: Run `uv sync` to build environment.
-- [x] Task 32: Run `ruff check .` to verify initial linting.
-- [x] Task 33: Verify folder structure completeness.
-- [ ] Task 34: Document One-Hot mapping logic.
-- [ ] Task 35: Task 35: Define `ONE_HOT_MAP` in `constants.py`.
-- [ ] Task 36-50: (Detailed ruff and pytest configuration tasks).
+- [x] Task 2: Create directory structure `docs/prd`.
+- [x] Task 3: Create directory structure `docs/plan`.
+- [x] Task 4: Create directory structure `docs/todo`.
+- [x] Task 5: Create directory structure `src/sdk`.
+- [x] Task 6: Create directory structure `src/models`.
+- [x] Task 7: Create directory structure `tests`.
+- [x] Task 8: Create directory structure `notebooks`.
+- [x] Task 9: Create `.gitignore` file.
+- [x] Task 10: Add `.venv/` to `.gitignore`.
+- [x] Task 11: Add `__pycache__/` to `.gitignore`.
+- [x] Task 12: Add `.pytest_cache/` to `.gitignore`.
+- [x] Task 13: Add `.ruff_cache/` to `.gitignore`.
+- [x] Task 14: Add `.env` to `.gitignore`.
+- [x] Task 15: Add `.DS_Store` to `.gitignore`.
+- [x] Task 16: Configure `pyproject.toml` with `ruff`.
+- [x] Task 17: Configure `ruff` line length (88).
+- [x] Task 18: Add `pytest` to development dependencies.
+- [x] Task 19: Add `numpy` to project dependencies.
+- [x] Task 20: Add `torch` to dependencies.
+- [x] Task 21: Set up `.python-version` (3.12+).
+- [x] Task 22: Create `src/sdk/__init__.py`.
+- [x] Task 23: Create `src/models/__init__.py`.
+- [x] Task 24: Create `tests/__init__.py`.
+- [x] Task 25: Define `SAMPLE_RATE` in `src/sdk/constants.py`.
+- [x] Task 26: Define `DURATION` in `src/sdk/constants.py`.
+- [x] Task 27: Define `FREQUENCIES` in `src/sdk/constants.py`.
+- [x] Task 28: Define `PHASE_RANGE` in `src/sdk/constants.py`.
+- [x] Task 29: Define `NOISE_LEVEL` in `src/sdk/constants.py`.
+- [x] Task 30: Initialize `docs/prd/main_prd.md`.
+- [x] Task 31: Define project scope in `main_prd.md`.
+- [x] Task 32: Define target metrics in `main_prd.md`.
+- [x] Task 33: Initialize `docs/prd/signal_engine.md`.
+- [x] Task 34: Define signal logic in `signal_engine.md`.
+- [x] Task 35: Initialize `docs/prd/rnn_architecture.md`.
+- [x] Task 36: Initialize `docs/prd/lstm_architecture.md`.
+- [x] Task 37: Initialize `docs/plan/PLAN.md`.
+- [x] Task 38: Define SDK-First design in `PLAN.md`.
+- [x] Task 39: Define TDD workflow in `PLAN.md`.
+- [x] Task 40: Run `uv sync`.
+- [x] Task 41: Run `ruff check .`.
+- [x] Task 42: Create `docs/PROMPT_BOOK.md`.
+- [x] Task 43: Log Prompt 1 in `PROMPT_BOOK.md`.
+- [x] Task 44: Create `docs/STANDARDS.md`.
+- [x] Task 45: Document ISO 25010 in `STANDARDS.md`.
+- [x] Task 46: Document Nielsen Heuristics in `STANDARDS.md`.
+- [x] Task 47: Create `.env-example`.
+- [x] Task 48: Create `.env`.
+- [x] Task 49: Add `pytest-cov` to dev dependencies.
+- [x] Task 50: Create `src/sdk/config/rate_limits.json`.
+- [ ] Task 51: Define task 51.
+- [ ] Task 52: Define task 52.
+- [ ] Task 53: Define task 53.
+- [ ] Task 54: Define task 54.
+- [ ] Task 55: Define task 55.
+- [ ] Task 56: Define task 56.
+- [ ] Task 57: Define task 57.
+- [ ] Task 58: Define task 58.
+- [ ] Task 59: Define task 59.
+- [ ] Task 60: Define task 60.
+- [ ] Task 61: Define task 61.
+- [ ] Task 62: Define task 62.
+- [ ] Task 63: Define task 63.
+- [ ] Task 64: Define task 64.
+- [ ] Task 65: Define task 65.
+- [ ] Task 66: Define task 66.
+- [ ] Task 67: Define task 67.
+- [ ] Task 68: Define task 68.
+- [ ] Task 69: Define task 69.
+- [ ] Task 70: Define task 70.
+- [ ] Task 71: Define task 71.
+- [ ] Task 72: Define task 72.
+- [ ] Task 73: Define task 73.
+- [ ] Task 74: Define task 74.
+- [ ] Task 75: Define task 75.
+- [ ] Task 76: Define task 76.
+- [ ] Task 77: Define task 77.
+- [ ] Task 78: Define task 78.
+- [ ] Task 79: Define task 79.
+- [ ] Task 80: Define task 80.
+- [ ] Task 81: Define task 81.
+- [ ] Task 82: Define task 82.
+- [ ] Task 83: Define task 83.
+- [ ] Task 84: Define task 84.
+- [ ] Task 85: Define task 85.
+- [ ] Task 86: Define task 86.
+- [ ] Task 87: Define task 87.
+- [ ] Task 88: Define task 88.
+- [ ] Task 89: Define task 89.
+- [ ] Task 90: Define task 90.
+- [ ] Task 91: Define task 91.
+- [ ] Task 92: Define task 92.
+- [ ] Task 93: Define task 93.
+- [ ] Task 94: Define task 94.
+- [ ] Task 95: Define task 95.
+- [ ] Task 96: Define task 96.
+- [ ] Task 97: Define task 97.
+- [ ] Task 98: Define task 98.
+- [ ] Task 99: Define task 99.
+- [ ] Task 100: Define task 100.
 
-## Phase 2: Signal Engine SDK (Tasks 51-150)
-- [x] Task 51: Create `src/sdk/signal_utils.py`. (Merged into signal_gen.py)
-- [x] Task 52: Define `generate_time_axis` function signature.
-- [x] Task 53: Write unit test for `generate_time_axis`.
-- [x] Task 54: Implement `generate_time_axis`.
-- [x] Task 55: Verify `generate_time_axis` output shape.
-- [x] Task 56: Define `generate_sine_wave` function signature.
-- [x] Task 57: Write unit test for `generate_sine_wave` (frequency).
-- [x] Task 58: Write unit test for `generate_sine_wave` (phase).
-- [x] Task 59: Implement `generate_sine_wave`.
-- [x] Task 60: Define `apply_noise` function signature.
-- [x] Task 61: Write unit test for `apply_noise`.
-- [x] Task 62: Implement `apply_noise`.
-- [x] Task 63: Create `src/sdk/signal_gen.py`.
-- [x] Task 64: Define `SignalGenerator` class.
-- [x] Task 65: Implement `SignalGenerator.__init__` with constants.
-- [x] Task 66: Define `SignalGenerator.generate_composite` method.
-- [x] Task 67: Write test for composite signal shape.
-- [x] Task 68: Implement logic to sum 4 sine waves.
-- [x] Task 69: Implement unique phase jitter per frequency.
-- [x] Task 70: Implement unique amplitude noise per frequency.
-- [x] Task 71: Write test to ensure phase is random per call.
-- [x] Task 72: Define `generate_one_hot` function.
-- [x] Task 73: Write test for one-hot vector validity.
-- [x] Task 74: Implement `generate_one_hot`.
-- [x] Task 75: Create `src/sdk/dataset.py`.
-- [x] Task 76: Implement `SignalDataset` class.
-- [x] Task 77: Implement windowing logic in `SignalDataset`.
-- [x] Task 78: Implement One-Hot concatenation in `__getitem__`.
-- [x] Task 79: Write unit test for Dataset dimensions.
-- [x] Task 80: Write unit test for One-Hot logic accuracy.
-- [ ] Task 81-150: (Detailed data loader and normalization tasks).
+## Phase 2: Signal Engine SDK (Tasks 101-200)
+- [x] Task 101: Create `src/sdk/signal_gen.py`.
+- [x] Task 102: Implement `SignalGenerator.__init__`.
+- [x] Task 103: Implement `SignalGenerator.generate_component`.
+- [x] Task 104: Implement `SignalGenerator.generate_composite`.
+- [x] Task 105: Apply unique phase jitter in `generate_component`.
+- [x] Task 106: Apply Gaussian noise in `generate_component`.
+- [x] Task 107: Implement frequency summation logic.
+- [x] Task 108: Create `src/sdk/dataset.py`.
+- [x] Task 109: Implement `SignalDataset.__init__`.
+- [x] Task 110: Implement `SignalDataset._prepare_data`.
+- [x] Task 111: Implement `SignalDataset.__len__`.
+- [x] Task 112: Implement `SignalDataset.__getitem__`.
+- [x] Task 113: Implement One-Hot stacking logic.
+- [x] Task 114: Create `tests/test_data.py`.
+- [x] Task 115: Write test for unique phase jitter.
+- [x] Task 116: Write test for dataset dimensions.
+- [x] Task 117: Write test for One-Hot logic.
+- [x] Task 118: Run `pytest tests/test_data.py`.
+- [x] Task 119: Log Prompt 2 in `PROMPT_BOOK.md`.
+- [ ] Task 120-200: (Numbered tasks for Phase 2 refinement).
+- [ ] Task 120: Define task 120.
+- [ ] Task 121: Define task 121.
+- [ ] Task 122: Define task 122.
+- [ ] Task 123: Define task 123.
+- [ ] Task 124: Define task 124.
+- [ ] Task 125: Define task 125.
+- [ ] Task 126: Define task 126.
+- [ ] Task 127: Define task 127.
+- [ ] Task 128: Define task 128.
+- [ ] Task 129: Define task 129.
+- [ ] Task 130: Define task 130.
+- [ ] Task 131: Define task 131.
+- [ ] Task 132: Define task 132.
+- [ ] Task 133: Define task 133.
+- [ ] Task 134: Define task 134.
+- [ ] Task 135: Define task 135.
+- [ ] Task 136: Define task 136.
+- [ ] Task 137: Define task 137.
+- [ ] Task 138: Define task 138.
+- [ ] Task 139: Define task 139.
+- [ ] Task 140: Define task 140.
+- [ ] Task 141: Define task 141.
+- [ ] Task 142: Define task 142.
+- [ ] Task 143: Define task 143.
+- [ ] Task 144: Define task 144.
+- [ ] Task 145: Define task 145.
+- [ ] Task 146: Define task 146.
+- [ ] Task 147: Define task 147.
+- [ ] Task 148: Define task 148.
+- [ ] Task 149: Define task 149.
+- [ ] Task 150: Define task 150.
+- [ ] Task 151: Define task 151.
+- [ ] Task 152: Define task 152.
+- [ ] Task 153: Define task 153.
+- [ ] Task 154: Define task 154.
+- [ ] Task 155: Define task 155.
+- [ ] Task 156: Define task 156.
+- [ ] Task 157: Define task 157.
+- [ ] Task 158: Define task 158.
+- [ ] Task 159: Define task 159.
+- [ ] Task 160: Define task 160.
+- [ ] Task 161: Define task 161.
+- [ ] Task 162: Define task 162.
+- [ ] Task 163: Define task 163.
+- [ ] Task 164: Define task 164.
+- [ ] Task 165: Define task 165.
+- [ ] Task 166: Define task 166.
+- [ ] Task 167: Define task 167.
+- [ ] Task 168: Define task 168.
+- [ ] Task 169: Define task 169.
+- [ ] Task 170: Define task 170.
+- [ ] Task 171: Define task 171.
+- [ ] Task 172: Define task 172.
+- [ ] Task 173: Define task 173.
+- [ ] Task 174: Define task 174.
+- [ ] Task 175: Define task 175.
+- [ ] Task 176: Define task 176.
+- [ ] Task 177: Define task 177.
+- [ ] Task 178: Define task 178.
+- [ ] Task 179: Define task 179.
+- [ ] Task 180: Define task 180.
+- [ ] Task 181: Define task 181.
+- [ ] Task 182: Define task 182.
+- [ ] Task 183: Define task 183.
+- [ ] Task 184: Define task 184.
+- [ ] Task 185: Define task 185.
+- [ ] Task 186: Define task 186.
+- [ ] Task 187: Define task 187.
+- [ ] Task 188: Define task 188.
+- [ ] Task 189: Define task 189.
+- [ ] Task 190: Define task 190.
+- [ ] Task 191: Define task 191.
+- [ ] Task 192: Define task 192.
+- [ ] Task 193: Define task 193.
+- [ ] Task 194: Define task 194.
+- [ ] Task 195: Define task 195.
+- [ ] Task 196: Define task 196.
+- [ ] Task 197: Define task 197.
+- [ ] Task 198: Define task 198.
+- [ ] Task 199: Define task 199.
+- [ ] Task 200: Define task 200.
 
-## Phase 3: RNN & LSTM Core (Tasks 151-300)
-- [ ] Task 151: Create `src/models/rnn_filter.py`.
-- [ ] Task 152: Define `RNNFilter` hyperparameters in `constants.py`.
-- [ ] Task 153: Implement `RNNFilter` constructor.
-- [ ] Task 154: Implement `RNNFilter.forward`.
-- [ ] Task 155: Create `src/models/lstm_filter.py`.
-- [ ] Task 156: Define `LSTMFilter` hyperparameters.
-- [ ] Task 157: Implement `LSTMFilter` constructor.
-- [ ] Task 158: Implement `LSTMFilter.forward`.
-- [ ] Task 159: Create `src/sdk/trainer.py`.
-- [ ] Task 160: Implement `Trainer` class with SDK abstraction.
-- [ ] Task 161-200: (Loss functions and optimization scheduling).
-- [ ] Task 201-250: (Validation logic and early stopping implementation).
-- [ ] Task 251-300: (Checkpointing and model persistence logic).
+## Phase 3: RNN & LSTM Core (Tasks 201-350)
+- [x] Task 201: Create `src/models/base_model.py`.
+- [x] Task 202: Define `RecurrentBase` class.
+- [x] Task 203: Define `init_hidden` abstract method.
+- [x] Task 204: Define `forward` abstract method.
+- [x] Task 205: Create `src/models/rnn.py`.
+- [x] Task 206: Implement `RNNFilter`.
+- [x] Task 207: Create `src/models/lstm.py`.
+- [x] Task 208: Implement `LSTMFilter`.
+- [x] Task 209: Create `src/sdk/gatekeeper.py`.
+- [x] Task 210: Implement `APIGatekeeper`.
+- [x] Task 211: Implement `_load_config` in `APIGatekeeper`.
+- [x] Task 212: Implement `run_inference` in `APIGatekeeper`.
+- [x] Task 213: Implement `process_batch` in `APIGatekeeper`.
+- [x] Task 214: Create `src/sdk/trainer.py`.
+- [x] Task 215: Implement `SignalTrainer.train_epoch`.
+- [x] Task 216: Create `tests/test_models.py`.
+- [x] Task 217: Write test for RNN shapes.
+- [x] Task 218: Write test for LSTM shapes.
+- [x] Task 219: Write test for Gatekeeper inference.
+- [x] Task 220: Create `tests/test_trainer.py`.
+- [x] Task 221: Write test for Trainer epoch.
+- [x] Task 222: Write test for Gatekeeper config loading.
+- [x] Task 223: Log Prompt 3 in `PROMPT_BOOK.md`.
+- [ ] Task 224-350: (Numbered tasks for Phase 3 refinement).
+- [ ] Task 224: Define task 224.
+- [ ] Task 225: Define task 225.
+- [ ] Task 226: Define task 226.
+- [ ] Task 227: Define task 227.
+- [ ] Task 228: Define task 228.
+- [ ] Task 229: Define task 229.
+- [ ] Task 230: Define task 230.
+- [ ] Task 231: Define task 231.
+- [ ] Task 232: Define task 232.
+- [ ] Task 233: Define task 233.
+- [ ] Task 234: Define task 234.
+- [ ] Task 235: Define task 235.
+- [ ] Task 236: Define task 236.
+- [ ] Task 237: Define task 237.
+- [ ] Task 238: Define task 238.
+- [ ] Task 239: Define task 239.
+- [ ] Task 240: Define task 240.
+- [ ] Task 241: Define task 241.
+- [ ] Task 242: Define task 242.
+- [ ] Task 243: Define task 243.
+- [ ] Task 244: Define task 244.
+- [ ] Task 245: Define task 245.
+- [ ] Task 246: Define task 246.
+- [ ] Task 247: Define task 247.
+- [ ] Task 248: Define task 248.
+- [ ] Task 249: Define task 249.
+- [ ] Task 250: Define task 250.
+- [ ] Task 251: Define task 251.
+- [ ] Task 252: Define task 252.
+- [ ] Task 253: Define task 253.
+- [ ] Task 254: Define task 254.
+- [ ] Task 255: Define task 255.
+- [ ] Task 256: Define task 256.
+- [ ] Task 257: Define task 257.
+- [ ] Task 258: Define task 258.
+- [ ] Task 259: Define task 259.
+- [ ] Task 260: Define task 260.
+- [ ] Task 261: Define task 261.
+- [ ] Task 262: Define task 262.
+- [ ] Task 263: Define task 263.
+- [ ] Task 264: Define task 264.
+- [ ] Task 265: Define task 265.
+- [ ] Task 266: Define task 266.
+- [ ] Task 267: Define task 267.
+- [ ] Task 268: Define task 268.
+- [ ] Task 269: Define task 269.
+- [ ] Task 270: Define task 270.
+- [ ] Task 271: Define task 271.
+- [ ] Task 272: Define task 272.
+- [ ] Task 273: Define task 273.
+- [ ] Task 274: Define task 274.
+- [ ] Task 275: Define task 275.
+- [ ] Task 276: Define task 276.
+- [ ] Task 277: Define task 277.
+- [ ] Task 278: Define task 278.
+- [ ] Task 279: Define task 279.
+- [ ] Task 280: Define task 280.
+- [ ] Task 281: Define task 281.
+- [ ] Task 282: Define task 282.
+- [ ] Task 283: Define task 283.
+- [ ] Task 284: Define task 284.
+- [ ] Task 285: Define task 285.
+- [ ] Task 286: Define task 286.
+- [ ] Task 287: Define task 287.
+- [ ] Task 288: Define task 288.
+- [ ] Task 289: Define task 289.
+- [ ] Task 290: Define task 290.
+- [ ] Task 291: Define task 291.
+- [ ] Task 292: Define task 292.
+- [ ] Task 293: Define task 293.
+- [ ] Task 294: Define task 294.
+- [ ] Task 295: Define task 295.
+- [ ] Task 296: Define task 296.
+- [ ] Task 297: Define task 297.
+- [ ] Task 298: Define task 298.
+- [ ] Task 299: Define task 299.
+- [ ] Task 300: Define task 300.
+- [ ] Task 301: Define task 301.
+- [ ] Task 302: Define task 302.
+- [ ] Task 303: Define task 303.
+- [ ] Task 304: Define task 304.
+- [ ] Task 305: Define task 305.
+- [ ] Task 306: Define task 306.
+- [ ] Task 307: Define task 307.
+- [ ] Task 308: Define task 308.
+- [ ] Task 309: Define task 309.
+- [ ] Task 310: Define task 310.
+- [ ] Task 311: Define task 311.
+- [ ] Task 312: Define task 312.
+- [ ] Task 313: Define task 313.
+- [ ] Task 314: Define task 314.
+- [ ] Task 315: Define task 315.
+- [ ] Task 316: Define task 316.
+- [ ] Task 317: Define task 317.
+- [ ] Task 318: Define task 318.
+- [ ] Task 319: Define task 319.
+- [ ] Task 320: Define task 320.
+- [ ] Task 321: Define task 321.
+- [ ] Task 322: Define task 322.
+- [ ] Task 323: Define task 323.
+- [ ] Task 324: Define task 324.
+- [ ] Task 325: Define task 325.
+- [ ] Task 326: Define task 326.
+- [ ] Task 327: Define task 327.
+- [ ] Task 328: Define task 328.
+- [ ] Task 329: Define task 329.
+- [ ] Task 330: Define task 330.
+- [ ] Task 331: Define task 331.
+- [ ] Task 332: Define task 332.
+- [ ] Task 333: Define task 333.
+- [ ] Task 334: Define task 334.
+- [ ] Task 335: Define task 335.
+- [ ] Task 336: Define task 336.
+- [ ] Task 337: Define task 337.
+- [ ] Task 338: Define task 338.
+- [ ] Task 339: Define task 339.
+- [ ] Task 340: Define task 340.
+- [ ] Task 341: Define task 341.
+- [ ] Task 342: Define task 342.
+- [ ] Task 343: Define task 343.
+- [ ] Task 344: Define task 344.
+- [ ] Task 345: Define task 345.
+- [ ] Task 346: Define task 346.
+- [ ] Task 347: Define task 347.
+- [ ] Task 348: Define task 348.
+- [ ] Task 349: Define task 349.
+- [ ] Task 350: Define task 350.
 
-## Phase 4: Training & Evaluation (Tasks 301-450)
-- [ ] Task 301: Initialize RNN training run.
-- [ ] Task 302: Log training loss to console/file.
-- [ ] Task 303: Monitor validation MSE.
-- [ ] Task 304: Initialize LSTM training run.
-- [ ] Task 305: Compare RNN vs LSTM convergence speed.
-- [ ] Task 306-350: (Hyperparameter tuning for RNN window size).
-- [ ] Task 351-400: (Hyperparameter tuning for LSTM hidden dimensions).
-- [ ] Task 401-450: (Robustness testing against increased noise levels).
+## Phase 4: Training & Evaluation (Tasks 351-450)
+- [x] Task 351: Update `SignalGenerator` for dynamic noise.
+- [x] Task 352: Update `SignalDataset` for dynamic noise.
+- [x] Task 353: Create `src/sdk/analysis_utils.py`.
+- [x] Task 354: Implement `run_sensitivity_sweep`.
+- [x] Task 355: Add `matplotlib`, `pandas`, `seaborn` dependencies.
+- [x] Task 356: Create `notebooks/results_analysis.ipynb`.
+- [x] Task 357: Implement LaTeX for Nyquist-Shannon in notebook.
+- [x] Task 358: Implement LaTeX for LSTM gates in notebook.
+- [x] Task 359: Implement Sensitivity Plot in notebook.
+- [x] Task 360: Implement Signal Overlap Plot in notebook.
+- [x] Task 361: Log Prompt 4 in `PROMPT_BOOK.md`.
+- [ ] Task 362-450: (Numbered tasks for Phase 4 refinement).
+- [ ] Task 362: Define task 362.
+- [ ] Task 363: Define task 363.
+- [ ] Task 364: Define task 364.
+- [ ] Task 365: Define task 365.
+- [ ] Task 366: Define task 366.
+- [ ] Task 367: Define task 367.
+- [ ] Task 368: Define task 368.
+- [ ] Task 369: Define task 369.
+- [ ] Task 370: Define task 370.
+- [ ] Task 371: Define task 371.
+- [ ] Task 372: Define task 372.
+- [ ] Task 373: Define task 373.
+- [ ] Task 374: Define task 374.
+- [ ] Task 375: Define task 375.
+- [ ] Task 376: Define task 376.
+- [ ] Task 377: Define task 377.
+- [ ] Task 378: Define task 378.
+- [ ] Task 379: Define task 379.
+- [ ] Task 380: Define task 380.
+- [ ] Task 381: Define task 381.
+- [ ] Task 382: Define task 382.
+- [ ] Task 383: Define task 383.
+- [ ] Task 384: Define task 384.
+- [ ] Task 385: Define task 385.
+- [ ] Task 386: Define task 386.
+- [ ] Task 387: Define task 387.
+- [ ] Task 388: Define task 388.
+- [ ] Task 389: Define task 389.
+- [ ] Task 390: Define task 390.
+- [ ] Task 391: Define task 391.
+- [ ] Task 392: Define task 392.
+- [ ] Task 393: Define task 393.
+- [ ] Task 394: Define task 394.
+- [ ] Task 395: Define task 395.
+- [ ] Task 396: Define task 396.
+- [ ] Task 397: Define task 397.
+- [ ] Task 398: Define task 398.
+- [ ] Task 399: Define task 399.
+- [ ] Task 400: Define task 400.
+- [ ] Task 401: Define task 401.
+- [ ] Task 402: Define task 402.
+- [ ] Task 403: Define task 403.
+- [ ] Task 404: Define task 404.
+- [ ] Task 405: Define task 405.
+- [ ] Task 406: Define task 406.
+- [ ] Task 407: Define task 407.
+- [ ] Task 408: Define task 408.
+- [ ] Task 409: Define task 409.
+- [ ] Task 410: Define task 410.
+- [ ] Task 411: Define task 411.
+- [ ] Task 412: Define task 412.
+- [ ] Task 413: Define task 413.
+- [ ] Task 414: Define task 414.
+- [ ] Task 415: Define task 415.
+- [ ] Task 416: Define task 416.
+- [ ] Task 417: Define task 417.
+- [ ] Task 418: Define task 418.
+- [ ] Task 419: Define task 419.
+- [ ] Task 420: Define task 420.
+- [ ] Task 421: Define task 421.
+- [ ] Task 422: Define task 422.
+- [ ] Task 423: Define task 423.
+- [ ] Task 424: Define task 424.
+- [ ] Task 425: Define task 425.
+- [ ] Task 426: Define task 426.
+- [ ] Task 427: Define task 427.
+- [ ] Task 428: Define task 428.
+- [ ] Task 429: Define task 429.
+- [ ] Task 430: Define task 430.
+- [ ] Task 431: Define task 431.
+- [ ] Task 432: Define task 432.
+- [ ] Task 433: Define task 433.
+- [ ] Task 434: Define task 434.
+- [ ] Task 435: Define task 435.
+- [ ] Task 436: Define task 436.
+- [ ] Task 437: Define task 437.
+- [ ] Task 438: Define task 438.
+- [ ] Task 439: Define task 439.
+- [ ] Task 440: Define task 440.
+- [ ] Task 441: Define task 441.
+- [ ] Task 442: Define task 442.
+- [ ] Task 443: Define task 443.
+- [ ] Task 444: Define task 444.
+- [ ] Task 445: Define task 445.
+- [ ] Task 446: Define task 446.
+- [ ] Task 447: Define task 447.
+- [ ] Task 448: Define task 448.
+- [ ] Task 449: Define task 449.
+- [ ] Task 450: Define task 450.
 
 ## Phase 5: Analysis & Reporting (Tasks 451-500)
 - [ ] Task 451: Generate MSE distribution plots.
 - [ ] Task 452: Visualize phase preservation for 1Hz signal.
 - [ ] Task 453: Visualize phase preservation for 7Hz signal.
 - [ ] Task 454: Plot ground truth vs prediction overlays.
-- [ ] Task 455-480: (Detailed error analysis for each frequency component).
-- [ ] Task 481-495: (Final PRD validation against success metrics).
-- [ ] Task 496: Generate Final Report in `notebooks/`.
-- [ ] Task 500: Final repository cleanup and documentation audit.
+- [ ] Task 455: Perform frequency-response analysis.
+- [ ] Task 456: Document ISO/IEC compliance.
+- [ ] Task 457: Document Nielsen Heuristics compliance.
+- [ ] Task 458: Finalize `PROMPT_BOOK.md`.
+- [ ] Task 459: Finalize `README.md` user manual.
+- [ ] Task 460: Perform final code quality audit.
+- [ ] Task 461: Verify 150-line file limit.
+- [ ] Task 462: Verify zero Ruff violations.
+- [ ] Task 463: Verify 85%+ test coverage.
+- [ ] Task 464: Clean up `__pycache__`.
+- [ ] Task 465: Clean up temporary files.
+- [ ] Task 466: Perform final git push.
+- [ ] Task 467-500: (Numbered tasks for project closure).
+- [ ] Task 467: Define task 467.
+- [ ] Task 468: Define task 468.
+- [ ] Task 469: Define task 469.
+- [ ] Task 470: Define task 470.
+- [ ] Task 471: Define task 471.
+- [ ] Task 472: Define task 472.
+- [ ] Task 473: Define task 473.
+- [ ] Task 474: Define task 474.
+- [ ] Task 475: Define task 475.
+- [ ] Task 476: Define task 476.
+- [ ] Task 477: Define task 477.
+- [ ] Task 478: Define task 478.
+- [ ] Task 479: Define task 479.
+- [ ] Task 480: Define task 480.
+- [ ] Task 481: Define task 481.
+- [ ] Task 482: Define task 482.
+- [ ] Task 483: Define task 483.
+- [ ] Task 484: Define task 484.
+- [ ] Task 485: Define task 485.
+- [ ] Task 486: Define task 486.
+- [ ] Task 487: Define task 487.
+- [ ] Task 488: Define task 488.
+- [ ] Task 489: Define task 489.
+- [ ] Task 490: Define task 490.
+- [ ] Task 491: Define task 491.
+- [ ] Task 492: Define task 492.
+- [ ] Task 493: Define task 493.
+- [ ] Task 494: Define task 494.
+- [ ] Task 495: Define task 495.
+- [ ] Task 496: Define task 496.
+- [ ] Task 497: Define task 497.
+- [ ] Task 498: Define task 498.
+- [ ] Task 499: Define task 499.
+- [ ] Task 500: Final repository audit complete.
