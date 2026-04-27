@@ -11,7 +11,12 @@ The system is built on two foundational pillars:
 ## 3. The Scientific Comparison: RNN vs. LSTM
 Our research yields a critical insight into recurrent temporal dependencies:
 - **RNN Failure (Low Frequency):** Standard RNNs struggle with the **1Hz signal**. Due to the vanishing gradient problem and a limited effective context window, the model loses phase consistency over the 1000-sample-per-second requirement.
-- **LSTM Success (Cell Memory):** The LSTM architecture, utilizing gated memory ($f_t, i_t, o_t$), maintains the internal cell state $\tilde{C}_t$ indefinitely. This "gated memory" allows the model to lock onto the phase of the low-frequency component even across 10-second durations.
+- **LSTM Success (Cell Memory):** The LSTM architecture maintains internal state via gated mechanisms, ensuring long-term phase preservation:
+    - **Forget Gate:** $f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)$
+    - **Input Gate:** $i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i)$
+    - **Output Gate:** $o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o)$
+    - **Cell State:** $C_t = f_t \odot C_{t-1} + i_t \odot \tanh(W_C \cdot [h_{t-1}, x_t] + b_C)$
+
 
 ## 4. Performance & Validation
 Comprehensive Sensitivity Analysis (available in `notebooks/results_analysis.ipynb`) demonstrates:
