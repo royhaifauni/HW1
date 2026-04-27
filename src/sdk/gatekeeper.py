@@ -4,9 +4,10 @@ import os
 from typing import Any
 from src.models.base_model import RecurrentBase
 
+
 class APIGatekeeper:
     """Manages model access, device orchestration, and rate limits."""
-    
+
     def __init__(self, model: RecurrentBase):
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.model = model.to(self.device)
@@ -32,12 +33,12 @@ class APIGatekeeper:
         x = x.to(self.device)
         batch_size = x.size(0)
         hidden = self.model.init_hidden(batch_size)
-        
+
         if isinstance(hidden, tuple):
             hidden = tuple(h.to(self.device) for h in hidden)
         else:
             hidden = hidden.to(self.device)
-            
+
         with torch.no_grad():
             out, _ = self.model(x, hidden)
         return out.cpu()

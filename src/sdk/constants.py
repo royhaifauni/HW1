@@ -14,12 +14,7 @@ S3_FREQ = 5
 S4_FREQ = 7
 
 # One-Hot Mapping
-ONE_HOT_MAP = {
-    1: [1, 0, 0, 0],
-    3: [0, 1, 0, 0],
-    5: [0, 0, 1, 0],
-    7: [0, 0, 0, 1]
-}
+ONE_HOT_MAP = {1: [1, 0, 0, 0], 3: [0, 1, 0, 0], 5: [0, 0, 1, 0], 7: [0, 0, 0, 1]}
 
 # Training Hyperparameters (Scaffold)
 WINDOW_SIZE = 100

@@ -2,12 +2,13 @@ import torch
 import torch.nn as nn
 from .base_model import RecurrentBase
 
+
 class RNNFilter(RecurrentBase):
     """Simple RNN implementation for signal filtering."""
-    
+
     def __init__(self, input_dim: int = 5, hidden_dim: int = 64, output_dim: int = 1):
         super().__init__(input_dim, hidden_dim, output_dim)
-        
+
         self.rnn = nn.RNN(input_dim, hidden_dim, batch_first=True)
         self.fc = nn.Linear(hidden_dim, output_dim)
 
