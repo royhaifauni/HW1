@@ -1,0 +1,92 @@
+# Project Ledger: Signal-Recurrence-Research
+
+## Phase 1: Scaffold & Infrastructure (Tasks 1-50)
+- [x] Task 1: Initialize project with `uv init`.
+- [x] Task 2: Create directory structure (`docs/prd`, `docs/plan`, `docs/todo`, `src/sdk`, `src/models`, `tests`, `notebooks`).
+- [x] Task 3: Create `.gitignore` with strict exclusion rules.
+- [x] Task 4: Configure `pyproject.toml` with `ruff`.
+- [x] Task 5: Configure `ruff` line length (88).
+- [x] Task 6: Add `pytest` to development dependencies.
+- [x] Task 7: Add `numpy` to project dependencies.
+- [x] Task 8: Add `torch` (or preferred DL framework) to dependencies.
+- [x] Task 9: Set up `.python-version` (3.12+).
+- [x] Task 10: Create `src/sdk/__init__.py`.
+- [ ] Task 11: Create `src/models/__init__.py`.
+- [ ] Task 12: Create `tests/__init__.py`.
+- [x] Task 13: Define `SAMPLE_RATE` constant in `src/sdk/constants.py`.
+- [x] Task 14: Define `DURATION` constant in `src/sdk/constants.py`.
+- [x] Task 15: Define `FREQUENCIES` constant (1, 3, 5, 7) in `src/sdk/constants.py`.
+- [x] Task 16: Define `PHASE_RANGE` constant (0, 2*pi).
+- [x] Task 17: Define `NOISE_LEVEL` constant.
+- [x] Task 18: Initialize `docs/prd/main_prd.md`.
+- [x] Task 19: Populate `main_prd.md` with project description.
+- [x] Task 20: Define success metrics in `main_prd.md`.
+- [x] Task 21: Initialize `docs/prd/signal_engine.md`.
+- [x] Task 22: Define signal generation logic in `signal_engine.md`.
+- [x] Task 23: Initialize `docs/prd/rnn_architecture.md`.
+- [x] Task 24: Initialize `docs/prd/lstm_architecture.md`.
+- [x] Task 25: Initialize `docs/plan/PLAN.md`.
+- [x] Task 26: Define SDK-First design in `PLAN.md`.
+- [x] Task 27: Define TDD workflow in `PLAN.md`.
+- [ ] Task 28: Set up initial test file `tests/test_environment.py`.
+- [ ] Task 29: Write test to verify `numpy` import.
+- [ ] Task 30: Write test to verify `torch` (or framework) import.
+- [x] Task 31: Run `uv sync` to build environment.
+- [ ] Task 32: Run `ruff check .` to verify initial linting.
+- [x] Task 33: Verify folder structure completeness.
+- [ ] Task 34: Document One-Hot mapping logic.
+- [ ] Task 35: Task 35: Define `ONE_HOT_MAP` in `constants.py`.
+- [ ] Task 36-50: (Detailed ruff and pytest configuration tasks).
+
+## Phase 2: Signal Engine SDK (Tasks 51-150)
+- [x] Task 51: Create `src/sdk/signal_utils.py`. (Merged into signal_gen.py)
+- [x] Task 52: Define `generate_time_axis` function signature.
+- [x] Task 53: Write unit test for `generate_time_axis`.
+- [x] Task 54: Implement `generate_time_axis`.
+- [x] Task 55: Verify `generate_time_axis` output shape.
+- [x] Task 56: Define `generate_sine_wave` function signature.
+- [x] Task 57: Write unit test for `generate_sine_wave` (frequency).
+- [x] Task 58: Write unit test for `generate_sine_wave` (phase).
+- [x] Task 59: Implement `generate_sine_wave`.
+- [x] Task 60: Define `apply_noise` function signature.
+- [x] Task 61: Write unit test for `apply_noise`.
+- [x] Task 62: Implement `apply_noise`.
+- [x] Task 63: Create `src/sdk/signal_gen.py`.
+- [x] Task 64: Define `SignalGenerator` class.
+- [x] Task 65: Implement `SignalGenerator.__init__` with constants.
+- [x] Task 66: Define `SignalGenerator.generate_composite` method.
+- [x] Task 67: Write test for composite signal shape.
+- [x] Task 68: Implement logic to sum 4 sine waves.
+- [x] Task 69: Implement unique phase jitter per frequency.
+- [x] Task 70: Implement unique amplitude noise per frequency.
+- [x] Task 71: Write test to ensure phase is random per call.
+- [x] Task 72: Define `generate_one_hot` function.
+- [x] Task 73: Write test for one-hot vector validity.
+- [x] Task 74: Implement `generate_one_hot`.
+- [ ] Task 75: Create data container `SignalBatch` in `src/sdk/types.py`.
+- [ ] Task 76-100: (Validation and edge case testing for signal engine).
+- [ ] Task 101-150: (Implementation of data loading and normalization utilities).
+
+## Phase 3: RNN & LSTM Core (Tasks 151-250)
+- [ ] Task 151: Create `src/models/base_model.py`.
+- [ ] Task 152: Define `AbstractNeuralFilter` interface.
+- [ ] Task 153: Create `src/models/rnn_filter.py`.
+- [ ] Task 154: Define `RNNFilter` class.
+- [ ] Task 155: Implement `RNNFilter.__init__`.
+- [ ] Task 156: Define input dimension (5 = 4D One-Hot + 1D Signal).
+- [ ] Task 157: Write test for `RNNFilter` forward pass shape.
+- [ ] Task 158: Implement RNN forward pass logic.
+- [ ] Task 159: Create `src/models/lstm_filter.py`.
+- [ ] Task 160: Define `LSTMFilter` class.
+- [ ] Task 161: Implement `LSTMFilter.__init__`.
+- [ ] Task 162: Write test for `LSTMFilter` forward pass shape.
+- [ ] Task 163: Implement LSTM forward pass logic.
+- [ ] Task 164: Create `src/sdk/training_utils.py`.
+- [ ] Task 165: Define `MSELoss` wrapper.
+- [ ] Task 166: Define `Optimizer` factory.
+- [ ] Task 167: Write test for sliding window batching.
+- [ ] Task 168: Implement sliding window generator.
+- [ ] Task 169: Task 169-200: (Model parameterization and weight initialization tasks).
+- [ ] Task 201-250: (Detailed implementation of training loops and validation steps).
+
+... (Remaining 250 tasks to be generated in Phase 2)
