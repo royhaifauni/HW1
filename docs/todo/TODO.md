@@ -11,8 +11,8 @@
 - [x] Task 8: Add `torch` (or preferred DL framework) to dependencies.
 - [x] Task 9: Set up `.python-version` (3.12+).
 - [x] Task 10: Create `src/sdk/__init__.py`.
-- [ ] Task 11: Create `src/models/__init__.py`.
-- [ ] Task 12: Create `tests/__init__.py`.
+- [x] Task 11: Create `src/models/__init__.py`.
+- [x] Task 12: Create `tests/__init__.py`.
 - [x] Task 13: Define `SAMPLE_RATE` constant in `src/sdk/constants.py`.
 - [x] Task 14: Define `DURATION` constant in `src/sdk/constants.py`.
 - [x] Task 15: Define `FREQUENCIES` constant (1, 3, 5, 7) in `src/sdk/constants.py`.
@@ -32,7 +32,7 @@
 - [ ] Task 29: Write test to verify `numpy` import.
 - [ ] Task 30: Write test to verify `torch` (or framework) import.
 - [x] Task 31: Run `uv sync` to build environment.
-- [ ] Task 32: Run `ruff check .` to verify initial linting.
+- [x] Task 32: Run `ruff check .` to verify initial linting.
 - [x] Task 33: Verify folder structure completeness.
 - [ ] Task 34: Document One-Hot mapping logic.
 - [ ] Task 35: Task 35: Define `ONE_HOT_MAP` in `constants.py`.
@@ -63,30 +63,45 @@
 - [x] Task 72: Define `generate_one_hot` function.
 - [x] Task 73: Write test for one-hot vector validity.
 - [x] Task 74: Implement `generate_one_hot`.
-- [ ] Task 75: Create data container `SignalBatch` in `src/sdk/types.py`.
-- [ ] Task 76-100: (Validation and edge case testing for signal engine).
-- [ ] Task 101-150: (Implementation of data loading and normalization utilities).
+- [x] Task 75: Create `src/sdk/dataset.py`.
+- [x] Task 76: Implement `SignalDataset` class.
+- [x] Task 77: Implement windowing logic in `SignalDataset`.
+- [x] Task 78: Implement One-Hot concatenation in `__getitem__`.
+- [x] Task 79: Write unit test for Dataset dimensions.
+- [x] Task 80: Write unit test for One-Hot logic accuracy.
+- [ ] Task 81-150: (Detailed data loader and normalization tasks).
 
-## Phase 3: RNN & LSTM Core (Tasks 151-250)
-- [ ] Task 151: Create `src/models/base_model.py`.
-- [ ] Task 152: Define `AbstractNeuralFilter` interface.
-- [ ] Task 153: Create `src/models/rnn_filter.py`.
-- [ ] Task 154: Define `RNNFilter` class.
-- [ ] Task 155: Implement `RNNFilter.__init__`.
-- [ ] Task 156: Define input dimension (5 = 4D One-Hot + 1D Signal).
-- [ ] Task 157: Write test for `RNNFilter` forward pass shape.
-- [ ] Task 158: Implement RNN forward pass logic.
-- [ ] Task 159: Create `src/models/lstm_filter.py`.
-- [ ] Task 160: Define `LSTMFilter` class.
-- [ ] Task 161: Implement `LSTMFilter.__init__`.
-- [ ] Task 162: Write test for `LSTMFilter` forward pass shape.
-- [ ] Task 163: Implement LSTM forward pass logic.
-- [ ] Task 164: Create `src/sdk/training_utils.py`.
-- [ ] Task 165: Define `MSELoss` wrapper.
-- [ ] Task 166: Define `Optimizer` factory.
-- [ ] Task 167: Write test for sliding window batching.
-- [ ] Task 168: Implement sliding window generator.
-- [ ] Task 169: Task 169-200: (Model parameterization and weight initialization tasks).
-- [ ] Task 201-250: (Detailed implementation of training loops and validation steps).
+## Phase 3: RNN & LSTM Core (Tasks 151-300)
+- [ ] Task 151: Create `src/models/rnn_filter.py`.
+- [ ] Task 152: Define `RNNFilter` hyperparameters in `constants.py`.
+- [ ] Task 153: Implement `RNNFilter` constructor.
+- [ ] Task 154: Implement `RNNFilter.forward`.
+- [ ] Task 155: Create `src/models/lstm_filter.py`.
+- [ ] Task 156: Define `LSTMFilter` hyperparameters.
+- [ ] Task 157: Implement `LSTMFilter` constructor.
+- [ ] Task 158: Implement `LSTMFilter.forward`.
+- [ ] Task 159: Create `src/sdk/trainer.py`.
+- [ ] Task 160: Implement `Trainer` class with SDK abstraction.
+- [ ] Task 161-200: (Loss functions and optimization scheduling).
+- [ ] Task 201-250: (Validation logic and early stopping implementation).
+- [ ] Task 251-300: (Checkpointing and model persistence logic).
 
-... (Remaining 250 tasks to be generated in Phase 2)
+## Phase 4: Training & Evaluation (Tasks 301-450)
+- [ ] Task 301: Initialize RNN training run.
+- [ ] Task 302: Log training loss to console/file.
+- [ ] Task 303: Monitor validation MSE.
+- [ ] Task 304: Initialize LSTM training run.
+- [ ] Task 305: Compare RNN vs LSTM convergence speed.
+- [ ] Task 306-350: (Hyperparameter tuning for RNN window size).
+- [ ] Task 351-400: (Hyperparameter tuning for LSTM hidden dimensions).
+- [ ] Task 401-450: (Robustness testing against increased noise levels).
+
+## Phase 5: Analysis & Reporting (Tasks 451-500)
+- [ ] Task 451: Generate MSE distribution plots.
+- [ ] Task 452: Visualize phase preservation for 1Hz signal.
+- [ ] Task 453: Visualize phase preservation for 7Hz signal.
+- [ ] Task 454: Plot ground truth vs prediction overlays.
+- [ ] Task 455-480: (Detailed error analysis for each frequency component).
+- [ ] Task 481-495: (Final PRD validation against success metrics).
+- [ ] Task 496: Generate Final Report in `notebooks/`.
+- [ ] Task 500: Final repository cleanup and documentation audit.

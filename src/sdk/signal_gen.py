@@ -1,5 +1,5 @@
 import numpy as np
-from typing import List, Tuple
+from typing import Tuple
 
 class SignalGenerator:
     """Generates composite signals with unique noise and phase jitter per frequency."""
