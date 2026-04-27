@@ -1,4 +1,3 @@
-import pytest
 from src.sdk.analysis_utils import run_sensitivity_sweep
 
 def test_run_sensitivity_sweep():
